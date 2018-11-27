@@ -4,23 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gongming</groupId>
-    <artifactId>gm</artifactId>
-    <version>1.0.0</version>
-    <packaging>pom</packaging>
+    <artifactId>gm-app</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-    <name>gm</name>
+    <name>gm-app</name>
     <description>Demo project for Spring Boot</description>
 
-    <modules>
-        <module>gm-common</module>
-        <module>gm-app</module>
-    </modules>
-
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.0.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.gongming</groupId>
+        <artifactId>gm</artifactId>
+        <version>1.0.0</version>
     </parent>
 
     <properties>
@@ -32,7 +26,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -40,23 +34,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-net</groupId>
-            <artifactId>commons-net</artifactId>
-            <version>3.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.4</version>
-            <scope>provided</scope>
+            <groupId>com.gongming</groupId>
+            <artifactId>gm-common</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
