@@ -153,13 +153,11 @@ public class FtpUtils {
 
     public static void main(String[] args) {
         FtpUtils ftpUtils = new FtpUtils(true);
-        if (ftpUtils.initArgs("ftp.properties")) {
-            if (ftpUtils.connect()) {
-               log.info("---------" + ftpUtils.upFile("中国","D:\\肥胖症通用库.222.xml"));
-            }
-        }
-        if (null != ftpUtils) {
+        if (ftpUtils.connected) {
+            ftpUtils.mkDir("中国/福建省/厦门市");
+            ftpUtils.upFile("中国/浙江省", "d:\\肥胖症通用库.222.xml");
             ftpUtils.close();
         }
+
     }
 }
